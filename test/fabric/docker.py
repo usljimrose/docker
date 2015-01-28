@@ -34,4 +34,7 @@ def artifacts():
     # For each log, get it down
     for log in logs:
         target = artifacts + "/%(host)s/%(path)s"
-        get(log, target)
+        try:
+            get(log, target)
+        except:
+            print("No such file: {0}".format(log))
