@@ -1,4 +1,5 @@
-from fabric.api import env, task
+import os
+from fabric.api import env, task, get
 from envassert import detect, file, package, process, service
 
 
